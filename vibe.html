@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coding 宣传页</title>
+  <meta name="description" content="Vibe Coding：把想法变成产品，专注创意与速度的新一代开发方式。" />
+  <style>
+    :root {
+      --bg: #060812;
+      --card: rgba(255, 255, 255, 0.08);
+      --text: #f4f7ff;
+      --muted: #b7c0db;
+      --primary: #7c5cff;
+      --accent: #20d9ff;
+      --success: #53f3b0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(1200px 700px at 90% -10%, rgba(124, 92, 255, 0.35), transparent 65%),
+        radial-gradient(1000px 600px at -10% 120%, rgba(32, 217, 255, 0.25), transparent 60%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1080px, 92vw);
+      margin: 0 auto;
+      padding: 72px 0 56px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.06;
+      max-width: 11em;
+    }
+
+    .subtitle {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: clamp(16px, 2.5vw, 22px);
+      margin-bottom: 28px;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 56px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), #5ea7ff);
+      box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 22px;
+      backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    .card p { margin: 0; color: var(--muted); }
+
+    .stats {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .stat {
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(6, 10, 25, 0.75);
+      border: 1px solid rgba(83, 243, 176, 0.25);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(24px, 3vw, 34px);
+      color: var(--success);
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin-top: 56px;
+      color: #8f98b6;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .grid, .stats { grid-template-columns: 1fr; }
+      .container { padding-top: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <span class="badge">新一代开发方式</span>
+    <h1>Vibe Coding：让灵感直接变成上线产品</h1>
+    <p class="subtitle">
+      不再被重复劳动拖慢节奏。用自然语言描述需求，让 AI 协作生成页面、逻辑和文案，
+      从“想到”到“做到”只差一次提交。
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="#">立即体验</a>
+      <a class="btn btn-secondary" href="#highlights">查看亮点</a>
+    </div>
+
+    <section id="highlights" class="grid">
+      <article class="card">
+        <h3>⚡ 极速原型</h3>
+        <p>一句话生成可运行页面，把产品会议里的想法当天落地，缩短决策周期。</p>
+      </article>
+      <article class="card">
+        <h3>🧠 智能协作</h3>
+        <p>前端、后端、文案、测试同步推进，AI 像一个随叫随到的全栈搭档。</p>
+      </article>
+      <article class="card">
+        <h3>🔒 可控可追溯</h3>
+        <p>每次改动都有记录，代码结构清晰，方便团队 review、回滚与持续迭代。</p>
+      </article>
+    </section>
+
+    <section class="stats" aria-label="成果数据">
+      <div class="stat">
+        <strong>70%</strong>
+        <span>开发周期缩短</span>
+      </div>
+      <div class="stat">
+        <strong>3x</strong>
+        <span>需求验证速度提升</span>
+      </div>
+      <div class="stat">
+        <strong>24h</strong>
+        <span>从概念到 Demo</span>
+      </div>
+    </section>
+
+    <footer>
+      准备好进入高创造力的开发时代了吗？现在就开始你的 Vibe Coding。
+    </footer>
+  </main>
+</body>
+</html>
